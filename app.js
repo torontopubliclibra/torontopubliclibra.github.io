@@ -7,7 +7,7 @@ app.key = `ba29e2524c03fb467cf6af47fca859df`;
 // initialize the app
 app.init = function(){
         
-    // form submit function on click
+    // form submit function on submit
     $(`.city-form`).on(`submit`, function(event){
 
         // prevent default reload
