@@ -78,16 +78,24 @@ h1 {
 }
 
 /* city selector dropdown options styling (background, colour, border, size, padding, and text) */
-#cities {
+#cities, .submit {
     background-color: #fff;
     color: #000;
     border: 2px solid #000;
     border-radius: 5px;
-    width: 20rem;
     height: 2rem;
     padding: 5px;
-    font-size: 1.1rem;
     letter-spacing: 0.025rem;
+}
+
+.submit:active {
+        transform: scale(0.95);
+        box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.5);
+}
+
+#cities {
+    width: 20rem;
+    font-size: 1.1rem;
 }
 
 /* select arrow styling (replace default with down chevron arrow image) */
@@ -97,7 +105,7 @@ select {
     /* remove default for chrome */
     -webkit-appearance: none;
     /* replace icon */
-    background: url("/assets/down-arrow.png") no-repeat right #fff;
+    background: url("assets/down-arrow.png") no-repeat right #fff;
     background-size: 30px;
   }
 
@@ -187,5 +195,8 @@ h3 {
     }
     #image-results {
         height: 425px;
+    }
+    .submit{
+        margin-top: 20px;
     }
 }
