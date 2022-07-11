@@ -8,7 +8,7 @@ app.key = `ba29e2524c03fb467cf6af47fca859df`;
 app.init = function(){
         
     // form submit function on click
-    $(`#cities`).on(`click tap`, function(event){
+    $(`.city-form`).on(`submit`, function(event){
 
         // prevent default reload
         event.preventDefault();
@@ -61,10 +61,6 @@ app.init = function(){
         if (selectedCity != null){
             $.getJSON(flickrAPI, flickrOptions, displayPhotos);
         };
-    })
-
-    $(`#random`).on(`click`, function(){
-        $( "#cities" ).click();
     })
     
 };
