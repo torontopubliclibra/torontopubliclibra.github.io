@@ -8,7 +8,7 @@ app.key = `ba29e2524c03fb467cf6af47fca859df`;
 app.init = function(){
         
     // form submit function on click
-    $(`#cities`).on(`click`, function(event){
+    $(`#cities`).on(`click touchstart`, function(event){
 
         // prevent default reload
         event.preventDefault();
