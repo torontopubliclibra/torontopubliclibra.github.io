@@ -97,7 +97,7 @@ select {
     /* remove default for chrome */
     -webkit-appearance: none;
     /* replace icon */
-    background: url("assets/down-arrow.png") no-repeat right #fff;
+    background: url("/assets/down-arrow.png") no-repeat right #fff;
     background-size: 30px;
   }
 
