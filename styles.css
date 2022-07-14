@@ -78,15 +78,21 @@ h1 {
 }
 
 /* dropdown and submit button styling (background, colour, border, size, padding, and text) */
-#cities, .submit {
+#cities, .submit, .random {
     background-color: #fff;
     color: #000;
     border: 2px solid #000;
     border-radius: 5px;
     height: 2rem;
-    padding: 5px;
+    padding: 0.25rem;
     letter-spacing: 0.025rem;
     font-size: 1.1rem;
+}
+
+/* submit and random button margins */
+.submit, .random {
+    margin-top: 0.75rem;
+    margin-right: 0.25rem;
 }
 
 /* submit button width */
@@ -94,13 +100,18 @@ h1 {
     width: 5rem;
 }
 
+/* random button width */
+.random {
+    width: 5.5rem;
+}
+
 /* dropdown width */
 #cities {
-    width: 20rem;
+    width: 80%;
 }
 
 /* submit button animation */
-.submit:active {
+.submit:active, .random:active {
     transform: scale(0.95);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.5);
 }
@@ -185,14 +196,14 @@ h3 {
     font-weight: 400;
 }
 
-/* re-styling for mobile (shrink header, alter sizing on city selector, change size of selector text and city label text, resize image results section, add margin to submit button) */
+/* re-styling for mobile (shrink header, alter sizing on city selector, change size of selector text and city label text, resize image results section) */
 @media only screen and (max-width: 768px) {
     h1 {
         font-size: 1.8rem;
         padding: 1rem;
     }
     #cities {
-        width: 100%;
+        width: 90%;
     }
     #cities-label {
         font-size: 1.1rem;
@@ -202,8 +213,5 @@ h3 {
     }
     #image-results {
         height: 425px;
-    }
-    .submit{
-        margin-top: 20px;
     }
 }
