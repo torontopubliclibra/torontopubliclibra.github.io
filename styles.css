@@ -17,44 +17,50 @@ html {
     font-size: 62.5%;
 }
 
-/* default font styling (white Raleway font) */
+/* default font family, weight, and color */
 header, body, footer {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     color: #fff
 }
 
-/* background styling (grey blue stripe pattern) */
+/*  body background */
 body {
     background-color: #5d6464;
     background-size: 10px 10px;
     background-image: repeating-linear-gradient(45deg, #7BA0CF 0, #ACCBF4 1px, #7BA0CF 0, #ACCBF4 50%);
 }
 
-/* background and border for header and image results sections (black background, white border) */
-h1, #image-results {
+/* header and image results sections background and border */
+header, #image-results {
     background-color: rgba(0, 0, 0, 0.75);
     border: 0.4rem solid #fff;
     border-radius: 15px;
 }
 
-/* background and border for city selector and footer section (grey background, black border) */
+/* header section padding and margin */
+header {
+    padding: 0.25rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* city selector and footer section background and border */
 #city-selection, #credits {
     background: #5d6464c0;
     border: 0.4rem solid #000;
     border-radius: 15px;
 }
 
-/* wrapper styling (width and margins) */
+/* wrapper width and margins */
 .wrapper {
     max-width: 600px;
     width: 85%;
     margin: 0 auto;
 }
 
-/* title styling (padding and text) */
+/* title padding and text */
 h1 {
-    padding: 2rem;
     font-size: 3rem;
     font-weight: 400;
     letter-spacing: 0.1rem;
@@ -62,7 +68,7 @@ h1 {
     text-align: center;
 }
 
-/* city selector section styling (padding, margins, and text) */
+/* city selector section padding, margins, and text */
 #city-selection {
     padding: 1.5rem;
     margin-bottom: 2rem;
@@ -70,14 +76,19 @@ h1 {
     letter-spacing: 0.05rem;
 }
 
-/* city selector dropdown styling (text and colour) */
+/* city selector label text and colour */
 #cities-label {
-    color: #fff;
     font-size: 1.3rem;
     font-weight: 400;
 }
 
-/* dropdown and submit button styling (background, colour, border, size, padding, and text) */
+/* city selector dropdown width and margins */
+#cities {
+    width: 80%;
+    margin: 0.75rem;
+}
+
+/* dropdown and submit button background, colour, border, size, padding, and text */
 #cities, .submit, .random {
     background-color: #fff;
     color: #000;
@@ -91,8 +102,12 @@ h1 {
 
 /* submit and random button margins */
 .submit, .random {
-    margin-top: 0.75rem;
-    margin-right: 0.25rem;
+    margin: 0.25rem;
+}
+
+/* pointer cursor on hover of buttons or dropdown */
+#cities:hover, .submit:hover, .random:hover {
+    cursor: pointer;
 }
 
 /* submit button width */
@@ -105,18 +120,13 @@ h1 {
     width: 5.5rem;
 }
 
-/* dropdown width */
-#cities {
-    width: 80%;
-}
-
-/* submit button animation */
+/* button click animations */
 .submit:active, .random:active {
     transform: scale(0.95);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.5);
 }
 
-/* select arrow styling (replace default with down chevron arrow image) */
+/* dropdown select arrow */
 select {
     /* remove default for firefox */
     -moz-appearance: none;
@@ -127,14 +137,14 @@ select {
     background-size: 30px;
   }
 
-/* image results styling (text and size) */
+/* image results text and size */
 #image-results {
     text-align: center;
     width: 100%;
     height: 400px;
 }
 
-/* image container flex styling (center items) */
+/* image container center with flex */
 .image-container {
     display: flex;
     justify-content: center;
@@ -142,7 +152,7 @@ select {
     vertical-align: middle;
 }
 
-/* city name styling (display, text, and padding) */
+/* city name text, and padding */
 h3 {
     display: block;
     text-transform: uppercase;
@@ -153,7 +163,7 @@ h3 {
 }
 
 /* image effects animation (fade in and zoom out from center) */
-@keyframes imageEffects {
+@keyframes fadeInZoomOut {
     from {
         width: 0px;
         height: 0px;
@@ -170,7 +180,7 @@ h3 {
     }
   }
 
-/* pigeon image styling (display as block, sizing, border size and colour, make image a circle, make image cover area, add animation) */
+/* pigeon image sizing, border, make image a circle, make image cover area, add animation */
 .pigeon-image {
     display: block;
     width: 300px;
@@ -178,10 +188,10 @@ h3 {
     border: 5px solid #000;
     border-radius: 50%;
     object-fit: cover;
-    animation: 0.75s ease-in imageEffects;
+    animation: 0.75s ease-in fadeInZoomOut;
 }
 
-/* footer styling (margins, text) */
+/* footer margins, text */
 #credits {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -190,7 +200,7 @@ h3 {
     line-height: 1.75rem;
 }
 
-/* footer link styling (text colour and weight) */
+/* footer link text colour and weight */
 #credits a {
     color: #fff;
     font-weight: 400;
