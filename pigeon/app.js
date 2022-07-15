@@ -1,10 +1,10 @@
 // create app
 const app = {};
 
-// flickr api key
+// cache flickr api key
 app.key = `ba29e2524c03fb467cf6af47fca859df`;
 
-// flickr api address to call (search method, using api key, sorting by relevance, for 10 results, in json)
+// set flickr api address to call (search method, using api key, sorting by relevance, for 10 results, in json)
 app.flickrAPI = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${app.key}&sort=relevance&per_page=10&format=json&dataType=json&nojsoncallback=1`;
 
 // random array element function
@@ -32,7 +32,7 @@ app.displayPhoto = function(data){
     // HTML to add to page using URLs and title from pigeon object
     const photoHTML = `<h3 class="city-label">${app.selectedCity}</h3><div class="image-container"><a href="${photoLink}" target="_blank"><img src="${photoURL}" alt="${pigeon.title}" title="${pigeon.title}" class="pigeon-image"></a></div>`;
 
-    // image results section
+    // cache image results section
     app.imageResults = $(`#image-results`);
 
     // add HTML to the image results section
@@ -41,14 +41,20 @@ app.displayPhoto = function(data){
     // reset city selection when image appears
     $(`#cities`).val(``);
     app.selectedCity = ``;
+
+    // re-enable random button when image appears
+    $(`#random`).attr('disabled', false);
 };
 
 // initialize the app
 app.init = function(){
-    
+
     // reset city selection on refresh
     $(`#cities`).val(``);
     app.selectedCity = ``;
+
+    // enable random button when app is intitialized
+    $(`#random`).attr('disabled', false);
 
     // enable submit button on city selection
     $(`#cities`).on(`change`, function(){
@@ -73,6 +79,9 @@ app.init = function(){
 
     // run function on random button click
     $(`#random`).on(`click`, function(){
+
+        // disable random button until photo is displayed
+        $(`#random`).attr('disabled', true);
 
         // randomize city value from cities array
         app.selectedCity = app.getRandomElement(app.cities);
