@@ -16,6 +16,56 @@ app.getRandomElement = function(array){
 // cities array to randomize
 app.cities = [`toronto`, `vancouver`, `new york city`, `chicago`, `boston`, `washington, d.c.`, `london`, `glasgow`, `melbourne`, `paris`, `amsterdam`, `stockholm`, `venice`, `mumbai`, `cairo`];
 
+// initialize the app
+app.init = function(){
+
+    // reset city selection
+    $(`#cities`).val(``);
+    app.selectedCity = ``;
+
+    // disable submit button until city selection
+    $(`#submit`).attr('disabled', true);
+    $(`#cities`).on(`change`, function(){
+        $(`#submit`).attr('disabled', false);
+    })
+
+    // enable random button
+    $(`#random`).attr('disabled', false);
+        
+    // run function on submit button click
+    $(`#submit`).on(`click`, function(){
+
+        // disable submit button until a new selection is made
+        $(`#submit`).attr('disabled', true);
+
+        // pull city value from selection
+        app.selectedCity = $(`#cities`).val();
+
+        // set flickr api search query using city value
+        app.flickrQuery = {text: `pigeon ${app.selectedCity}`};
+
+        // run json call and then display photo function using ajax shorthand
+        $.getJSON(app.flickrAPI, app.flickrQuery, app.displayPhoto);
+    });
+
+    // run function on random button click
+    $(`#random`).on(`click`, function(){
+
+        // disable buttons until photo is displayed
+        $(`#random`).attr('disabled', true);
+        $(`#submit`).attr('disabled', true);
+
+        // randomize city value from cities array
+        app.selectedCity = app.getRandomElement(app.cities);
+
+        // set flickr api search query using city value
+        app.flickrQuery = {text: `pigeon ${app.selectedCity}`};
+
+        // run json call and then display photo function using ajax shorthand
+        $.getJSON(app.flickrAPI, app.flickrQuery, app.displayPhoto);
+    });
+};
+
 // display photos function
 app.displayPhoto = function(data){
 
@@ -44,57 +94,6 @@ app.displayPhoto = function(data){
 
     // re-enable random button when image appears
     $(`#random`).attr('disabled', false);
-};
-
-// initialize the app
-app.init = function(){
-
-    // reset city selection
-    $(`#cities`).val(``);
-    app.selectedCity = ``;
-
-    // disable submit button
-    $(`#submit`).attr('disabled', true);
-
-    // enable random button
-    $(`#random`).attr('disabled', false);
-
-    // enable submit button on city selection
-    $(`#cities`).on(`change`, function(){
-        $(`#submit`).attr('disabled', false);
-    })
-        
-    // run function on submit button click
-    $(`#submit`).on(`click`, function(){
-
-        // disable submit button until a new selection is made
-        $(`#submit`).attr('disabled', true);
-
-        // pull city value from selection
-        app.selectedCity = $(`#cities`).val();
-
-        // set flickr api search query using city value
-        app.flickrQuery = {text: `pigeon ${app.selectedCity}`};
-
-        // run json call and then display photo function using ajax shorthand
-        $.getJSON(app.flickrAPI, app.flickrQuery, app.displayPhoto);
-    });
-
-    // run function on random button click
-    $(`#random`).on(`click`, function(){
-
-        // disable random button until photo is displayed
-        $(`#random`).attr('disabled', true);
-
-        // randomize city value from cities array
-        app.selectedCity = app.getRandomElement(app.cities);
-
-        // set flickr api search query using city value
-        app.flickrQuery = {text: `pigeon ${app.selectedCity}`};
-
-        // run json call and then display photo function using ajax shorthand
-        $.getJSON(app.flickrAPI, app.flickrQuery, app.displayPhoto);
-    });
 };
 
 // run the app
