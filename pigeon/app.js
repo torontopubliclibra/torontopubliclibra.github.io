@@ -49,11 +49,14 @@ app.displayPhoto = function(data){
 // initialize the app
 app.init = function(){
 
-    // reset city selection on refresh
+    // reset city selection
     $(`#cities`).val(``);
     app.selectedCity = ``;
 
-    // enable random button when app is intitialized
+    // disable submit button
+    $(`#submit`).attr('disabled', true);
+
+    // enable random button
     $(`#random`).attr('disabled', false);
 
     // enable submit button on city selection
