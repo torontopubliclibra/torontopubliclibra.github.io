@@ -93,8 +93,8 @@ h1 {
     margin: 0.75rem;
 }
 
-/* dropdown and submit button background, colour, border, size, padding, and text */
-#cities, #submit, #random {
+/* button and dropdown background, colour, border, size, padding, and text */
+#cities, button {
     background-color: #fff;
     color: #000;
     border: 2px solid #000;
@@ -105,13 +105,13 @@ h1 {
     font-size: 1.1rem;
 }
 
-/* submit and random button margins */
-#submit, #random {
+/* button margins */
+button {
     margin: 0.25rem;
 }
 
-/* pointer cursor on hover of buttons or dropdown */
-#cities:hover, #submit:enabled:hover, #random:hover {
+/* pointer cursor on hover of dropdown or buttons */
+#cities:hover, button:enabled:hover {
     cursor: pointer;
 }
 
@@ -125,15 +125,16 @@ h1 {
     width: 5.5rem;
 }
 
-/* button click animations */
-#submit:enabled:active, #random:active {
+/* button click animation */
+button:enabled:active {
     transform: scale(0.95);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* transparent background for disabled button */
-#submit:disabled {
-    background-color: rgba(255, 255, 255, 0.5)
+button:disabled {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* dropdown select arrow */
@@ -177,14 +178,12 @@ h3 {
     from {
         width: 0px;
         height: 0px;
-        margin: 300px;
         opacity: 0%;
-        transform: translate(0px, -150px);
+        transform: translate(0px, 150px);
     }
     to {
         width: 300px;
         height: 300px;
-        margin: 0px;
         opacity: 100%;
         transform: translate(0px, 0px);
     }
