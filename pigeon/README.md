@@ -22,4 +22,4 @@ When the random button is pressed, the app randomizes an array of the fifteen ci
 
 ## Creator
 
-Dana Teagle (they/she) is a web developer from Tkaronto, Ontario. You can find them on Wwitter at [@teagleistyping](https://twitter.com/teagleistyping) and on GitHub at [torontopubliclibra](https://github.com/torontopublicibra).
+Dana Teagle (they/she) is a web developer from Tkaronto, Ontario. You can find them on Twitter at [@teagleistyping](https://twitter.com/teagleistyping) and on GitHub at [torontopubliclibra](https://github.com/torontopublicibra).
