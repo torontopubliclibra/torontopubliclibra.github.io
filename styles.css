@@ -188,7 +188,7 @@ and (orientation: portrait){
     }
     #hamburger-menu {
         font-size: 5vw;
-        padding: 3vh 3.5vw;
+        padding: 2vw;
         background-color: rgb(30, 67, 69);
         width: 100%;
         text-align: left;
