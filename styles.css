@@ -24,7 +24,7 @@ html {
 }
 
 .wrapper {
-    max-width: 768px;
+    max-width: 600px;
     width: 85%;
     margin: 0 auto;
 }
@@ -160,23 +160,11 @@ nav li.dropdown {
 }
 
 @media only screen and (max-width: 768px) {
-    .wrapper {
-        max-width: 85%;
-    }
-    h1 {
-        font-size: 2.5rem;
-    }
-    h2 {
-        font-size: 2rem;
-    }
     #image-bio {
         flex-direction: column;
     }
     #dana-img {
         max-width: 85%;
         width: 20rem;
-    }
-    nav li {
-        font-size: 1.2rem;
     }
 }
