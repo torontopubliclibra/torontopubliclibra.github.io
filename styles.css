@@ -24,7 +24,7 @@ html {
 }
 
 .wrapper {
-    max-width: 600px;
+    max-width: 768px;
     width: 85%;
     margin: 0 auto;
 }
@@ -63,16 +63,13 @@ header {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 5vw;
 }
 h2 {
-    font-size: 2.2rem;
+    font-size: 3.5vw;
 }
 h3 {
     font-size: 1.8rem;
-}
-p {
-    font-size: 1.3rem;
 }
 h6 {
     font-size: 1rem;
@@ -101,6 +98,7 @@ nav ul {
   
 nav li {
     display: inline;
+    font-size: 1.2rem;
   }
   
 nav li a, .dropbtn {
@@ -159,7 +157,17 @@ nav li.dropdown {
     margin: 0rem 1rem;
 }
 
+#bio p, #contact p {
+    font-size: 1.3rem;
+}
+
 @media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 10vw;
+    }
+    h2 {
+        font-size: 7vw;
+    }
     #image-bio {
         flex-direction: column;
     }
