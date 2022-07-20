@@ -155,6 +155,10 @@ nav li.dropdown {
     border: 0.3rem solid rgb(30, 67, 69);
 }
 
+#bio {
+    margin: 0rem 1rem;
+}
+
 @keyframes fadeInAndUp {
     from {
         opacity: 0%;
@@ -165,10 +169,6 @@ nav li.dropdown {
         transform: translate(0px, 0px);
     }
   }
-
-.bio {
-    margin: 0rem 1rem;
-}
 
 @media only screen and (max-width: 768px) {
     h1 {
@@ -182,5 +182,8 @@ nav li.dropdown {
     }
     #dana-img {
         max-width: 250px;
+    }
+    nav li {
+        font-size: 1.2rem;
     }
 }
