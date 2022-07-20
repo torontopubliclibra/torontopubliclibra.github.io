@@ -87,6 +87,10 @@ h6 {
     border-bottom: none;
 }
 
+#hamburger-btn {
+    display: none;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -100,9 +104,10 @@ nav li {
     font-size: 1.2rem;
   }
   
-nav li a, .dropbtn {
+nav li a, .dropbtn, #hamburger-menu {
     display: inline-block;
     color: #fff;
+    border: none;
     padding: 14px 16px;
     text-decoration: none;
   }
@@ -178,6 +183,21 @@ nav li.dropdown {
 
 @media only screen and (max-width: 992px)
 and (orientation: portrait){
+    #hamburger-btn {
+        display: inline;
+    }
+    #hamburger-menu {
+        font-size: 5vw;
+        padding: 3vh 3.5vw;
+        background-color: rgb(30, 67, 69);
+        width: 100%;
+        text-align: left;
+    }
+    #hamburger-menu:hover {
+        cursor: pointer;
+        opacity: 50%;
+        transition: all 0.5s;
+    }
     .wrapper {
         max-width: 800px;
     }
@@ -202,18 +222,19 @@ and (orientation: portrait){
     #bio {
         margin: 0;
     }
+    #nav-links {
+        display: none;
+    }
     nav li {
         display: inline;
         font-size: 6vw;
+        text-align: left;
       }
-    nav li a, .dropbtn, nav li.dropdown {
+    nav li a, nav li.dropdown, .dropbtn {
         display: block;
-        border-bottom: 5px solid #fff;
       }
-    .dropdown-content {
-        min-width: 60%;
-        left: 20%;
-        right: 20%;
+    nav li a, .dropbtn {
+        border-top: 5px solid #fff;
     }
     .dropdown-content a {
         border-bottom: none;
