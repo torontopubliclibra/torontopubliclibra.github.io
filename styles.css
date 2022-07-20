@@ -65,13 +65,16 @@ header {
 
 h1 {
     font-size: 5rem;
+    font-weight: 400;
 }
 h2 {
     font-size: 2.5rem;
+    font-weight: 400;
 }
 h3 {
     font-size: 1.8rem;
     margin: 1rem 0rem;
+    font-weight: 400;
 }
 h6 {
     font-size: 1rem;
@@ -80,15 +83,8 @@ h6 {
 }
 
 .hr-1 {
-    border-top: 0.15rem dashed rgb(30, 67, 69);
+    border-top: 2px dashed rgb(30, 67, 69);
     border-bottom: none;
-    border-radius: 5px;
-}
-
-.hr-2 {
-    border-top: 0.15rem dotted #fff;
-    border-bottom: none;
-    border-radius: 5px;
 }
 
 nav ul {
@@ -160,7 +156,7 @@ nav li.dropdown {
     max-width: 35%;
     display: block;
     margin: 1rem 0rem;
-    border: 0.3rem solid rgb(30, 67, 69);
+    border: 0.5rem solid rgb(30, 67, 69);
 }
 
 #bio {
@@ -178,11 +174,6 @@ nav li.dropdown {
     h2 {
         font-size: 4.5vw;
     }
-}
-
-@media only screen and (max-width: 992px)
-and (orientation: landscape){
-    
 }
 
 @media only screen and (max-width: 992px)
@@ -226,5 +217,8 @@ and (orientation: portrait){
     }
     .dropdown-content a {
         border-bottom: none;
+    }
+    .hr-1 {
+        display: none;
     }
 }
