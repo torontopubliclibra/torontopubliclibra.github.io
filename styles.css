@@ -1,189 +1,54 @@
-/* remove default styling */
-html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
-
-.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
-
-html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
-
-*, *:before, *:after {box-sizing: inherit}
-
-.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
-/* font import */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap'); */
-
-/* default font size */
-html {
-    font-size: 62.5%;
-}
-
-.wrapper {
-    max-width: 768px;
-    width: 85%;
-    margin: 0 auto;
-}
-
-body {
-    background: linear-gradient(135deg, #b0d4e3 0%,#b0d4e3 0%,#bad7e2 0%,#efc4e2 100%);
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300;
-    color: rgb(30, 67, 69);
-}
-
-a {
-    color: rgb(30, 67, 69);
-}
-
-a:hover {
-    color: #fff;
-    background-color: rgba(30, 67, 69, 0.5);
-}
-
-header, #about, #contact {
-    padding: 1rem 0rem;
-}
-
-footer {
-    padding: 0.25rem 0rem;
-}
-
-header {
-    line-height: 1.5rem;
-}
-
-#about, footer {
-    background-color: #fff;
-}
-
-h1 {
-    font-size: 3.5rem;
-}
-h2 {
-    font-size: 2.2rem;
-}
-h3 {
-    font-size: 1.8rem;
-}
-p {
-    font-size: 1.3rem;
-}
-h6 {
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-.hr-1 {
-    border-top: 0.15rem dashed rgb(30, 67, 69);
-    border-bottom: none;
-    border-radius: 5px;
-}
-
-.hr-2 {
-    border-top: 0.15rem dotted #fff;
-    border-bottom: none;
-    border-radius: 5px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgb(30, 67, 69);
-  }
-  
-nav li {
-    display: inline;
-  }
-  
-nav li a, .dropbtn {
-    display: inline-block;
-    color: #fff;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-nav li a:hover, .dropdown:hover .dropbtn {
-    background-color: #fff;
-    color:rgb(30, 67, 69);
-  }
-  
-nav li.dropdown {
-    display: inline-block;
-  }
-  
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(30, 67, 69, 0.2);
-    z-index: 1;
-  }
-  
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-.dropdown-content a:hover {background-color: rgba(30, 67, 69, 0.75); color: #fff;}
-  
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-#image-bio {
-    display: flex;
-    align-items: center;
-    vertical-align: middle;
-}
-
-#dana-img {
-    display: block;
-    width: 250px;
-    margin: 1rem 0rem;
-    border: 0.3rem solid rgb(30, 67, 69);
-}
-
-#bio {
-    margin: 0rem 1rem;
-}
-
-@keyframes fadeInAndUp {
-    from {
-        opacity: 0%;
-        transform: translate(0px, 20px);
-    }
-    to {
-        opacity: 100%;
-        transform: translate(0px, 0px);
-    }
-  }
-
-@media only screen and (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    h2 {
-        font-size: 2rem;
-    }
-    #image-bio {
-        flex-direction: column;
-    }
-    #dana-img {
-        max-width: 250px;
-    }
-    nav li {
-        font-size: 1.2rem;
-    }
-}
+<!DOCTYPE html>
+<html lang="en" id="index">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dana Teagle</title>
+        <link rel="icon" type="image/x-icon" href="">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <h1>= Dana Teagle =</h1>
+                <h2>Web Developer</h2>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#about" title="About">About</a></li>
+                <li><a href="#contact" title="Contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn" title="Portfolio">Portfolio</a>
+                    <div class="dropdown-content">
+                      <a href="pigeon/" title="The Pigeon Hole" target="_blank">The Pigeon Hole</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <section id="about">
+            <div class="wrapper">
+                <h3>About</h3>
+                <hr class="hr-1">
+                <div id="image-bio">
+                    <img src="assets/dana.jpeg" id="dana-img" alt="A photo of Dana Teagle (they/she)." title="Dana Teagle (they/she)">
+                    <span id="bio"><p>I'm Dana Rosamund Teagle (they/she) and I'm a web developer based in Toronto, Ontario, currently studying at <a href="https://junocollege.com" title="Juno College" target="_blank">Juno College</a>. I have experience working with HTML, CSS, and jQuery. When I'm not coding, I spend my time reading comic books and making playlists.<br><br>My latest portfolio piece is an app called <a href="pigeon/" title="The Pigeon Hole" target="_blank">The Pigeon Hole</a> which displays photos of pigeons upon selection of a city, using the Flickr API.</p></span>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="wrapper">
+                <h3>Contact</h3>
+                <hr class="hr-1">
+                <p>You can find me on Twitter at <a href="https://twitter.com/teagleistyping" title="@teagleistyping on Twitter" target="_blank">@teagleistyping</a>, on GitHub at <a href="https://github.com/torontopubliclibra" title="@torontopubliclibra on GitHub" target="_blank">@torontopubliclibra</a>, and you can reach me by email at <a href="mailto:dana.r.teagle@gmail.com" title="Dana Teagle email address" target="_blank">dana.r.teagle@gmail.com</a>.</p>
+            </div>
+        </section>
+        <footer>
+            <div class="wrapper">
+                <h6>Website designed by Dana Teagle.</h6>
+            </div>
+        </footer>
+    </body>
+</html>
