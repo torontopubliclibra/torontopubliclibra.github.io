@@ -44,6 +44,7 @@ a {
 a:hover {
     color: #fff;
     background-color: rgba(30, 67, 69, 0.5);
+    transition: all 0.5s;
 }
 
 header, #about, #contact {
@@ -113,6 +114,7 @@ nav li a, .dropbtn {
 nav li a:hover, .dropdown:hover .dropbtn {
     background-color: #fff;
     color:rgb(30, 67, 69);
+    transition: all 0.5s;
   }
   
 nav li.dropdown {
@@ -136,10 +138,15 @@ nav li.dropdown {
     text-align: center;
   }
   
-.dropdown-content a:hover {background-color: rgba(30, 67, 69, 0.75); color: #fff;}
+.dropdown-content a:hover {
+    background-color: rgba(30, 67, 69, 0.75);
+    color: #fff;
+    transition: all 0.5s;
+}
   
 .dropdown:hover .dropdown-content {
     display: block;
+    transition: all 0.5s;
 }
 
 #image-bio {
