@@ -82,6 +82,10 @@ h6 {
     margin: 2rem 0;
 }
 
+h1, h2, h3, h6, p, hr {
+    animation: fadeUp 0.5s ease-in;
+}
+
 .hr-1 {
     border-top: 2px dashed rgb(30, 67, 69);
     border-bottom: none;
@@ -102,6 +106,7 @@ nav ul {
 nav li {
     display: inline;
     font-size: 1.2rem;
+    animation: fadeIn 0.5s ease-in;
   }
   
 nav li a, .dropbtn, #hamburger-menu {
@@ -162,6 +167,7 @@ nav li.dropdown {
     display: block;
     margin: 1rem 0rem;
     border: 0.5rem solid rgb(30, 67, 69);
+    animation: fadeUp 0.5s ease-in;
 }
 
 #bio {
@@ -171,6 +177,26 @@ nav li.dropdown {
 #bio p, #contact p {
     font-size: 1.5rem;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+  }
+
+@keyframes fadeUp {
+    from {
+        opacity: 0%;
+        transform: translate(0px, 15px);
+    }
+    to {
+        opacity: 100%;
+        transform: translate(0px, 0px);
+    }
+  }
 
 @media only screen and (max-width: 992px){
     h1 {
