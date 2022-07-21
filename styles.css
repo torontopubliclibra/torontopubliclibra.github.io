@@ -112,7 +112,7 @@ nav li a, .dropbtn, #hamburger-menu {
     text-decoration: none;
   }
   
-nav li a:hover, .dropdown:hover .dropbtn {
+nav li a:hover, .dropdown:hover .dropbtn, nav li a:active, .dropdown:active .dropbtn {
     background-color: #fff;
     color:rgb(30, 67, 69);
     transition: all 0.5s;
@@ -139,13 +139,13 @@ nav li.dropdown {
     text-align: center;
   }
   
-.dropdown-content a:hover {
+.dropdown-content a:hover, .dropdown-content a:active {
     background-color: rgba(30, 67, 69, 0.75);
     color: #fff;
     transition: all 0.5s;
 }
   
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content, .dropdown:active .dropdown-content {
     display: block;
     transition: all 0.5s;
 }
@@ -188,15 +188,13 @@ and (orientation: portrait){
     }
     #hamburger-menu {
         font-size: 5vw;
-        padding: 2vw;
+        padding: 2.2vw;
         background-color: rgb(30, 67, 69);
         width: 100%;
         text-align: left;
     }
-    #hamburger-menu:hover {
+    #hamburger-menu:hover, #hamburger-menu:active {
         cursor: pointer;
-        opacity: 50%;
-        transition: all 0.5s;
     }
     .wrapper {
         max-width: 800px;
