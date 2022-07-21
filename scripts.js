@@ -5,7 +5,7 @@ $(`#hamburger-menu`).on(`click`, function(){
         $(`#hamburger-menu`).removeClass(`hamburger-open`)
     } else {
         $(`#nav-links`).show();
-        $(`#hamburger-menu i`).css(`transform`, `rotate(90deg)`).css(`transition`, `all 0.5s`);
+        $(`#hamburger-menu i`).css(`transform`, `rotate(-90deg)`).css(`transition`, `all 0.5s`);
         $(`#hamburger-menu`).addClass(`hamburger-open`)
     }
 })
