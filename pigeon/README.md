@@ -2,7 +2,7 @@
 
 ## About
 
-[The Pigeon Hole](https://torontopubliclibra.github.io/pigeon) was designed in July 2022 by Dana Teagle at [Juno College](https://junocollege.com) as part of the part-time Javascript course's final API project using the [Flickr API](https://www.flickr.com/services/api/). This app was written using HTML, CSS, and jQuery.
+[The Pigeon Hole](https://danateagle.com/pigeon) was designed in July 2022 by Dana Teagle at [Juno College](https://junocollege.com) as part of the part-time Javascript course's final API project using the [Flickr API](https://www.flickr.com/services/api/). This app was written using HTML, CSS, and jQuery.
 
 ## Functionality
 
