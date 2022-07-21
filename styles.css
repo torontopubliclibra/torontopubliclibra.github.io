@@ -187,8 +187,7 @@ and (orientation: portrait){
         display: inline;
     }
     #hamburger-menu {
-        font-size: 5vw;
-        padding: 2.2vw;
+        font-size: 7vw;
         background-color: rgb(30, 67, 69);
         width: 100%;
         text-align: left;
@@ -225,7 +224,7 @@ and (orientation: portrait){
     }
     nav li {
         display: inline;
-        font-size: 6vw;
+        font-size: 7vw;
         text-align: left;
       }
     nav li a, nav li.dropdown, .dropbtn {
