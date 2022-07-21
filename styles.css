@@ -95,6 +95,10 @@ h1, h2, h3, h6, p, hr {
     display: none;
 }
 
+#hamburger-menu i {
+    animation: fadeIn 0.5s ease-in;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -217,7 +221,7 @@ and (orientation: portrait){
         padding: 1vh 3vw;
         background-color: rgb(30, 67, 69);
         width: 100%;
-        text-align: left;
+        text-align: right;
     }
     #hamburger-menu:hover, #hamburger-menu:active {
         cursor: pointer;
